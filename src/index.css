@@ -1,0 +1,353 @@
+/* ============================================================================
+   DESIGN SYSTEM & GLOBAL STYLES
+   ============================================================================ */
+
+:root {
+  --primary-navy: #0e1424;
+  --primary-burgundy: #70131e;
+  --primary-burgundy-hover: #590f18;
+  --primary-burgundy-light: #fff3f4;
+  --accent-gold: #c69214;
+  --accent-gold-hover: #ad7f0e;
+  --accent-gold-light: #fdf8eb;
+  --accent-blue: #1e3a8a;
+  
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+  
+  --bg-page: #fcfbf9;
+  --bg-card: #ffffff;
+  --bg-warm: #fbf7f4;
+  --bg-subtle: #f1f5f9;
+  --bg-dark: #090d16;
+  
+  --border-color: #e2e8f0;
+  --border-gold: rgba(198, 146, 20, 0.3);
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 40px rgba(112, 19, 30, 0.15);
+  
+  /* Typography System based on specifications:
+     - Main Title / Hero: Plus Jakarta Sans Bold
+     - Section Titles: Poppins SemiBold
+     - Body Content: Inter
+     - Property Names: Poppins Medium
+     - Price / Numbers: Poppins Bold
+  */
+  --font-hero: 'Plus Jakarta Sans', sans-serif;
+  --font-section: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-property: 'Poppins', sans-serif;
+  --font-price: 'Poppins', sans-serif;
+  --font-accent: 'Plus Jakarta Sans', sans-serif;
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-section);
+  color: var(--primary-navy);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: var(--font-hero);
+  font-weight: 700;
+}
+
+.hero-title, .main-title {
+  font-family: var(--font-hero);
+  font-weight: 800;
+}
+
+.section-title {
+  font-family: var(--font-section);
+  font-weight: 600;
+}
+
+.property-title, .property-name {
+  font-family: var(--font-property);
+  font-weight: 500;
+}
+
+.price-text, .price-number, .stat-number {
+  font-family: var(--font-price);
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 24px;
+}
+
+/* Section Common Layout */
+.section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 48px auto;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--primary-burgundy-light);
+  color: var(--primary-burgundy);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  border: 1px solid rgba(112, 19, 30, 0.15);
+}
+
+.section-tag.gold {
+  background: var(--accent-gold-light);
+  color: var(--accent-gold-hover);
+  border-color: var(--border-gold);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+}
+
+.section-title .text-gold {
+  color: var(--accent-gold);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.section-title .text-burgundy {
+  color: var(--primary-burgundy);
+}
+
+.section-description {
+  font-size: clamp(0.9375rem, 1.8vw, 1.05rem);
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .container-fluid {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary-burgundy) 0%, #8a1727 100%);
+  color: var(--text-white);
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(112, 19, 30, 0.3);
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(112, 19, 30, 0.4);
+  background: linear-gradient(135deg, #590f18 0%, var(--primary-burgundy) 100%);
+  color: #ffffff;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #dab23c 100%);
+  color: #1a160d;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(198, 146, 20, 0.35);
+  text-transform: uppercase;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(198, 146, 20, 0.45);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary-burgundy);
+  border: 1.5px solid var(--primary-burgundy);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background: var(--primary-burgundy);
+  color: #ffffff;
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: var(--transition);
+}
+
+.btn-outline-white:hover {
+  background: #ffffff;
+  color: var(--primary-burgundy);
+  border-color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(198, 146, 20, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(198, 146, 20, 0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.pulse-badge {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c59b27;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #70131e;
+}

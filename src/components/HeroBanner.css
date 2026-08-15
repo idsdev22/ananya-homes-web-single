@@ -1,0 +1,239 @@
+/* ============================================================================
+   HERO BANNER - FULL-VIEW RESPONSIVE LAYOUT
+   ============================================================================ */
+
+.hero-custom-banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 48px;
+  margin: 0;
+}
+
+.hero-mobile-img-wrap {
+  display: none;
+  width: 100%;
+}
+
+.hero-mobile-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-custom-banner>* {
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating Instant Enquiry Box (Desktop) */
+.hero-enquiry-box {
+  position: relative;
+  background: #ffffff;
+  padding: 26px 22px;
+  border-radius: 16px;
+  width: 340px;
+  max-width: 100%;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.enquiry-box-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.enquiry-title {
+  color: #1e293b;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--font-section, 'Poppins', sans-serif);
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.enquiry-form input[type="text"],
+.enquiry-form input[type="email"],
+.enquiry-form input[type="tel"] {
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  transition: all 0.2s ease;
+}
+
+.enquiry-form input::placeholder {
+  color: #94a3b8;
+}
+
+.enquiry-form input:focus {
+  border-color: #171842;
+  box-shadow: 0 0 0 3px rgba(23, 24, 66, 0.1);
+}
+
+.enquiry-consent {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 10.5px;
+  color: #475569;
+  line-height: 1.4;
+  margin-top: 2px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.enquiry-consent input {
+  margin-top: 2px;
+  accent-color: #171842;
+}
+
+.enquiry-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #171842;
+  color: #ffffff;
+  border: none;
+  padding: 13px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: var(--font-hero, 'Plus Jakarta Sans', sans-serif);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(23, 24, 66, 0.3);
+  transition: all 0.25s ease;
+  margin-top: 4px;
+}
+
+.enquiry-submit:hover {
+  background: #0f102c;
+  transform: translateY(-1px);
+}
+
+.enquiry-success-msg {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.enquiry-success-msg h4 {
+  font-size: 18px;
+  color: #171842;
+  font-family: var(--font-section, 'Poppins', sans-serif);
+  font-weight: 600;
+  margin: 10px 0 6px;
+}
+
+.enquiry-success-msg p {
+  font-size: 13px;
+  color: #64748b;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================================ */
+
+/* Laptops (901px - 1280px) */
+@media (max-width: 1280px) and (min-width: 901px) {
+  .hero-custom-banner {
+    padding: 0 28px;
+  }
+
+  .hero-enquiry-box {
+    width: 310px;
+    padding: 22px 18px;
+  }
+}
+
+/* Tablets and Mobile (< 900px) */
+@media (max-width: 900px) {
+  .hero-custom-banner {
+    min-height: auto;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-image: none !important;
+    background-color: #ffffff;
+  }
+
+  .hero-mobile-img-wrap {
+    display: block !important;
+    width: 100%;
+    background: #f1f5f9;
+  }
+
+  .hero-mobile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero-enquiry-box {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    margin-top: -10px;
+    border-radius: 24px 24px 0 0;
+    padding: 24px 20px 32px;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08);
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .enquiry-form input[type="text"],
+  .enquiry-form input[type="email"],
+  .enquiry-form input[type="tel"] {
+    font-size: 16px;
+    /* Prevents auto-zoom on iOS */
+    padding: 13px 14px;
+  }
+
+  .enquiry-submit {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-enquiry-box {
+    margin-top: -8px;
+    padding: 20px 16px 28px;
+  }
+
+  .enquiry-title {
+    font-size: 20px;
+  }
+
+  .enquiry-consent {
+    font-size: 11px;
+  }
+}
