@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  GraduationCap, 
-  School, 
-  Cross, 
-  Briefcase, 
-  Navigation, 
-  MapPin, 
-  Clock, 
-  Compass, 
+import {
+  GraduationCap,
+  School,
+  Cross,
+  Briefcase,
+  Navigation,
+  MapPin,
+  Clock,
+  Compass,
   ExternalLink,
   ChevronRight
 } from 'lucide-react';
@@ -101,70 +101,7 @@ export const NearbyConnectivity = ({ onOpenEnquiry }) => {
           </div>
 
           {/* Right Column: Location Map & Advantages Card */}
-          <div className="location-advantage-column">
-            <div className="map-card-wrapper">
-              <div className="map-frame-header">
-                <div className="map-header-title">
-                  <MapPin size={16} className="text-burgundy" />
-                  <span>Location Map & Surroundings</span>
-                </div>
-                <a 
-                  href={projectInfo.googleMapUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="map-open-link"
-                >
-                  <span>Open in Maps</span>
-                  <ExternalLink size={13} />
-                </a>
-              </div>
 
-              {/* Embedded Interactive Map */}
-              <div className="map-iframe-container">
-                <iframe
-                  title={`${projectInfo.name} Location Map`}
-                  src={projectInfo.googleMapEmbed}
-                  width="100%"
-                  height="260"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-
-              {/* Location Highlights Box */}
-              <div className="location-summary-box">
-                <h4 className="summary-title">Why Kurumbapalayam is Coimbatore's Prime Growth Hub:</h4>
-                <ul className="summary-list">
-                  <li>
-                    <ChevronRight size={15} className="bullet-icon text-gold" />
-                    <span>5 Mins to Kumaran Hospital & Sathy Road (NH-209)</span>
-                  </li>
-                  <li>
-                    <ChevronRight size={15} className="bullet-icon text-gold" />
-                    <span>5-10 Mins to Kumaraguru College of Technology (KCT)</span>
-                  </li>
-                  <li>
-                    <ChevronRight size={15} className="bullet-icon text-gold" />
-                    <span>10-15 Mins to CHIL SEZ IT Park (Cognizant/Bosch) & Airport</span>
-                  </li>
-                  <li>
-                    <ChevronRight size={15} className="bullet-icon text-gold" />
-                    <span>Rapidly appreciating residential micro-market with top schools & colleges</span>
-                  </li>
-                </ul>
-
-                <button 
-                  type="button" 
-                  className="btn-primary w-100 mt-3"
-                  onClick={onOpenEnquiry}
-                >
-                  <span>Request Exact Location Coordinates</span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

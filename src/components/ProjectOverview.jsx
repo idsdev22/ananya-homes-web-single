@@ -12,11 +12,11 @@ export const ProjectOverview = ({ onOpenBrochure, onOpenEnquiry }) => {
           {/* Left Column: Visual Collage */}
           <div className="overview-visual-col">
             <div className="visual-card primary-visual">
-              <img
+              {/* <img
                 src={overview.imagePrimary}
                 alt={`${projectInfo.name} Architecture`}
                 className="overview-img"
-              />
+              /> */}
               <div className="visual-badge-floating">
                 <Award size={20} className="badge-icon text-gold" />
                 <div>

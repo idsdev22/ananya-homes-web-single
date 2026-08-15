@@ -59,7 +59,7 @@ function App() {
           onOpenEnquiry={() => handleOpenEnquiry({ title: 'Hero Banner Enquiry' })}
         />
         {/* <OfferBanner onOpenEnquiry={() => handleOpenEnquiry({ title: 'Pre-Launch Offer Privilege' })} /> */}
-        <StatsCounter />
+        {/* <StatsCounter /> */}
         <ProjectOverview
           onOpenBrochure={handleOpenBrochure}
           onOpenEnquiry={() => handleOpenEnquiry({ title: 'Site Visit Scheduling' })}
@@ -75,7 +75,7 @@ function App() {
       {/* Simple Footer */}
       <footer className="simple-footer">
         <div className="container simple-footer-container">
-          <div className="footer-copyright">© Adissia Developers Pvt Ltd. All rights reserved.</div>
+          <div className="footer-copyright">© Ananya Homes Pvt Ltd. All rights reserved.</div>
           <div className="footer-links">
             <a href="#terms">Terms & Conditions</a>
             <a href="#privacy">Privacy Policy</a>
@@ -84,7 +84,7 @@ function App() {
       </footer>
 
       <StickyActions onOpenEnquiry={() => handleOpenEnquiry({ title: 'Sticky Action Enquiry' })} />
-      <FloatingWhatsApp />
+      {/* <FloatingWhatsApp /> */}
 
       <EnquiryModal
         isOpen={modalState.isOpen}
