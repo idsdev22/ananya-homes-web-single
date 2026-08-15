@@ -54,9 +54,9 @@ function App() {
     <div className="app-container">
 
       <main>
-        <HeroBanner 
-          onFormSuccess={() => { }} 
-          onOpenEnquiry={() => handleOpenEnquiry({ title: 'Hero Banner Enquiry' })} 
+        <HeroBanner
+          onFormSuccess={() => { }}
+          onOpenEnquiry={() => handleOpenEnquiry({ title: 'Hero Banner Enquiry' })}
         />
         {/* <OfferBanner onOpenEnquiry={() => handleOpenEnquiry({ title: 'Pre-Launch Offer Privilege' })} /> */}
         <StatsCounter />
@@ -67,7 +67,7 @@ function App() {
         {/* <Configurations onSelectPlot={handleSelectPlot} /> */}
         <Amenities />
         <MasterPlanGallery onOpenBrochure={handleOpenBrochure} />
-        <InfrastructureSection />
+        {/* <InfrastructureSection /> */}
         <NearbyConnectivity onOpenEnquiry={() => handleOpenEnquiry({ title: 'Location Advantage' })} />
         {/* <FaqSection /> */}
       </main>

@@ -1,108 +1,176 @@
 /* ============================================================================
-   HERO BANNER - FULL-VIEW RESPONSIVE LAYOUT
+   HERO BANNER - PREMIUM RESPONSIVE LAYOUT (DESKTOP & MOBILE)
    ============================================================================ */
 
-.hero-custom-banner {
+.hero-custom-banner-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  background-size: 100% 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 48px;
+  background-color: #0b0f19;
   margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.hero-mobile-img-wrap {
-  display: none;
+/* Media Container */
+.hero-banner-media-container {
+  position: relative;
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: block;
 }
 
-.hero-mobile-img {
+.hero-banner-picture {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-banner-img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
-.hero-custom-banner>* {
-  position: relative;
-  z-index: 2;
+/* ============================================================================
+   FLOATING INSTANT ENQUIRY BOX (DESKTOP & LAPTOPS)
+   ============================================================================ */
+.hero-enquiry-overlay-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 4.5%;
+  z-index: 20;
 }
 
-/* Floating Instant Enquiry Box (Desktop) */
 .hero-enquiry-box {
+  pointer-events: auto;
   position: relative;
   background: #ffffff;
-  padding: 26px 22px;
-  border-radius: 16px;
-  width: 340px;
+  padding: 24px 22px 22px;
+  border-radius: 14px;
+  width: 350px;
   max-width: 100%;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
-  z-index: 10;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  animation: slideInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  backdrop-filter: blur(8px);
+}
+
+.enquiry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8fafc;
+  border: 1px solid rgba(198, 146, 20, 0.25);
+  color: #c69214;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .enquiry-box-header {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .enquiry-title {
-  color: #1e293b;
-  margin: 0;
-  font-size: 22px;
+  color: #1b1851;
+  margin: 0 0 3px 0;
+  font-size: 20px;
   font-weight: 700;
-  font-family: var(--font-section, 'Poppins', sans-serif);
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.enquiry-subtitle {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .enquiry-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+}
+
+.form-group-hero {
+  position: relative;
+  width: 100%;
 }
 
 .enquiry-form input[type="text"],
 .enquiry-form input[type="email"],
 .enquiry-form input[type="tel"] {
-  padding: 12px 14px;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 14px;
+  width: 100%;
+  padding: 10px 13px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 7px;
+  font-size: 13.5px;
   outline: none;
-  background: #ffffff;
+  background: #f8fafc;
   color: #0f172a;
-  font-family: var(--font-body, 'Inter', sans-serif);
-  transition: all 0.2s ease;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  transition: all 0.22s ease-in-out;
+  box-sizing: border-box;
 }
 
 .enquiry-form input::placeholder {
   color: #94a3b8;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 13px;
 }
 
 .enquiry-form input:focus {
-  border-color: #171842;
-  box-shadow: 0 0 0 3px rgba(23, 24, 66, 0.1);
+  border-color: #1b1851;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(27, 24, 81, 0.12);
 }
 
 .enquiry-consent {
   display: flex;
-  gap: 8px;
+  gap: 7px;
   align-items: flex-start;
   font-size: 10.5px;
   color: #475569;
   line-height: 1.4;
-  margin-top: 2px;
-  font-family: var(--font-body, 'Inter', sans-serif);
+  margin-top: 1px;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  user-select: none;
 }
 
-.enquiry-consent input {
+.enquiry-consent input[type="checkbox"] {
   margin-top: 2px;
-  accent-color: #171842;
+  accent-color: #1b1851;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.enquiry-consent span strong {
+  color: #1b1851;
+  font-weight: 600;
 }
 
 .enquiry-submit {
@@ -110,130 +178,251 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #171842;
+  background: linear-gradient(135deg, #1b1851 0%, #2b2580 100%);
   color: #ffffff;
   border: none;
-  padding: 13px;
-  border-radius: 6px;
-  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 7px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  font-family: var(--font-hero, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(23, 24, 66, 0.3);
-  transition: all 0.25s ease;
-  margin-top: 4px;
+  box-shadow: 0 4px 15px rgba(27, 24, 81, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 2px;
+  position: relative;
+  overflow: hidden;
 }
 
 .enquiry-submit:hover {
-  background: #0f102c;
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, #13103c 0%, #1b1851 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(27, 24, 81, 0.35);
+}
+
+.enquiry-submit:active {
+  transform: translateY(0);
+}
+
+.enquiry-privacy-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 10.5px;
+  color: #64748b;
+  margin-top: 2px;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+}
+
+.enquiry-privacy-note svg {
+  color: #16a34a;
 }
 
 .enquiry-success-msg {
   text-align: center;
   padding: 20px 10px;
+  animation: fadeIn 0.45s ease-out;
+}
+
+.success-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(198, 146, 20, 0.1);
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .enquiry-success-msg h4 {
   font-size: 18px;
-  color: #171842;
-  font-family: var(--font-section, 'Poppins', sans-serif);
-  font-weight: 600;
-  margin: 10px 0 6px;
+  color: #1b1851;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-weight: 700;
+  margin: 0 0 6px;
 }
 
 .enquiry-success-msg p {
-  font-size: 13px;
+  font-size: 12.5px;
   color: #64748b;
-  font-family: var(--font-body, 'Inter', sans-serif);
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
   line-height: 1.5;
   margin: 0;
 }
 
+/* Hide mobile enquiry section on desktop */
+.hero-mobile-enquiry-section {
+  display: none;
+}
+
 /* ============================================================================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE BREAKPOINTS (LAPTOPS, TABLETS, MOBILES)
    ============================================================================ */
 
-/* Laptops (901px - 1280px) */
-@media (max-width: 1280px) and (min-width: 901px) {
-  .hero-custom-banner {
-    padding: 0 28px;
+/* High-res Desktops (1440px+) */
+@media (min-width: 1440px) {
+  .hero-enquiry-overlay-wrapper {
+    padding: 0 5%;
   }
 
   .hero-enquiry-box {
-    width: 310px;
-    padding: 22px 18px;
+    width: 370px;
+    padding: 28px 24px;
+  }
+
+  .enquiry-title {
+    font-size: 22px;
   }
 }
 
-/* Tablets and Mobile (< 900px) */
-@media (max-width: 900px) {
-  .hero-custom-banner {
-    min-height: auto;
-    height: auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    background-image: none !important;
-    background-color: #ffffff;
-  }
-
-  .hero-mobile-img-wrap {
-    display: block !important;
-    width: 100%;
-    background: #f1f5f9;
-  }
-
-  .hero-mobile-img {
-    width: 100%;
-    height: auto;
-    display: block;
+/* Medium Laptops (1025px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1025px) {
+  .hero-enquiry-overlay-wrapper {
+    padding: 0 3%;
   }
 
   .hero-enquiry-box {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    margin-top: -10px;
-    border-radius: 24px 24px 0 0;
-    padding: 24px 20px 32px;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08);
-    border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    width: 330px;
+    padding: 20px 18px;
+  }
+
+  .enquiry-title {
+    font-size: 19px;
   }
 
   .enquiry-form input[type="text"],
   .enquiry-form input[type="email"],
   .enquiry-form input[type="tel"] {
-    font-size: 16px;
-    /* Prevents auto-zoom on iOS */
-    padding: 13px 14px;
+    padding: 9px 12px;
+    font-size: 13px;
   }
 
   .enquiry-submit {
-    padding: 14px;
-    font-size: 15px;
+    padding: 11px 12px;
+    font-size: 12.5px;
   }
 }
 
-@media (max-width: 480px) {
+/* Tablets (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-enquiry-overlay-wrapper {
+    padding: 0 24px;
+  }
+
   .hero-enquiry-box {
-    margin-top: -8px;
-    padding: 20px 16px 28px;
+    width: 310px;
+    padding: 18px 16px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
   }
 
   .enquiry-title {
-    font-size: 20px;
+    font-size: 17px;
+  }
+
+  .enquiry-badge {
+    font-size: 9px;
+    padding: 2px 7px;
+  }
+
+  .enquiry-form input[type="text"],
+  .enquiry-form input[type="email"],
+  .enquiry-form input[type="tel"] {
+    padding: 8px 10px;
+    font-size: 12.5px;
+  }
+
+  .enquiry-submit {
+    padding: 10px 12px;
+    font-size: 12px;
   }
 
   .enquiry-consent {
+    font-size: 9.5px;
+  }
+}
+
+/* Mobile & Small Tablet (<= 768px) */
+@media (max-width: 768px) {
+  .hero-custom-banner-section {
+    background-color: #f1f5f9;
+  }
+
+  .hero-banner-media-container {
+    max-width: 100%;
+  }
+
+  .hero-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Hide the absolute overlay on mobile */
+  .hero-enquiry-overlay-wrapper {
+    display: none !important;
+  }
+
+  /* Show the mobile enquiry section under the mobile banner */
+  .hero-mobile-enquiry-section {
+    display: block;
+    width: 100%;
+    padding: 16px 14px 28px;
+    background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+    box-sizing: border-box;
+  }
+
+  .hero-enquiry-box.mobile-card-hero {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    border-radius: 14px;
+    padding: 22px 18px;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    background: #ffffff;
+    animation: fadeInUp 0.5s ease-out;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .enquiry-title {
+    font-size: 20px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="text"],
+  .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="email"],
+  .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="tel"] {
+    font-size: 15px;
+    padding: 12px 14px;
+    border-radius: 8px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .enquiry-submit {
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .enquiry-consent {
     font-size: 11px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-mobile-enquiry-section {
+    padding: 12px 10px 24px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero {
+    padding: 18px 14px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .enquiry-title {
+    font-size: 18px;
   }
 }

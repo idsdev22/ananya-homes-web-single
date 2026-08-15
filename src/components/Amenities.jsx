@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { 
-  Building2, 
-  Waves, 
-  Dumbbell, 
-  Trees, 
-  Trophy, 
-  Smile, 
-  Zap, 
-  Milestone, 
-  ShieldCheck, 
+import {
+  Building2,
+  Waves,
+  Dumbbell,
+  Trees,
+  Trophy,
+  Smile,
+  Zap,
+  Milestone,
+  ShieldCheck,
   ShieldAlert,
-  Droplets, 
-  Heart, 
+  Droplets,
+  Heart,
   BatteryCharging,
   Sparkles,
   Award,
@@ -52,8 +52,8 @@ export const Amenities = () => {
   const { amenities, amenityCategories } = propertyData;
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const filteredAmenities = activeCategory === 'all' 
-    ? amenities 
+  const filteredAmenities = activeCategory === 'all'
+    ? amenities
     : amenities.filter(item => item.category === activeCategory);
 
   return (
@@ -104,7 +104,7 @@ export const Amenities = () => {
         </div>
 
         {/* Bottom Highlights Bar */}
-        <div className="amenities-highlight-banner">
+        {/* <div className="amenities-highlight-banner">
           <div className="amenity-highlight-item">
             <Award size={22} className="text-gold" />
             <div>
@@ -126,7 +126,7 @@ export const Amenities = () => {
               <span>Compound perimeter with CCTV & RFID access</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1699,7 +1699,7 @@
   color: #ffffff;
   margin: 2px 0 0 0;
   font-weight: 700;
-  font-family: 'Cinzel', Georgia, serif;
+  font-family: var(--font-serif);
 }
 
 .pure-swipe-hint {
@@ -1916,7 +1916,7 @@
   color: #ffffff;
   font-size: 1.25rem;
   margin: 2px 0 0 0;
-  font-family: 'Cinzel', Georgia, serif;
+  font-family: var(--font-serif);
 }
 
 .footer-counter {
@@ -2952,7 +2952,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 0.8125rem;
-  font-family: var(--font-body, 'Inter', sans-serif);
+  font-family: var(--font-poppins);
   padding: 0 20px;
 }
 

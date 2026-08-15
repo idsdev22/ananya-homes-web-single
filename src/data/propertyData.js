@@ -106,15 +106,9 @@ export const propertyData = {
     leadText: "Royal Varishtaa by Ananya Homes is a meticulously planned gated residential plotted enclave in Kurumbapalayam, engineered for discerning homebuyers and strategic investors.",
     paragraphs: [
       "Strategically situated in Coimbatore's rapidly growing northern corridor at Kurumbapalayam (near Sathy Road & Saravanampatti IT hub), Royal Varishtaa offers premium freehold DTCP plots with high appreciation potential.",
-      "Every plot is thoughtfully aligned with 100% Vasthu compliance, wide asphalt internal roads, underground electrical conduits, lush landscaped park, sports turf, and 24/7 security."
     ],
     highlightsList: [
-      "Grand Entrance Arch with 24/7 manned security checkpost and CCTV surveillance",
-      "Landscaped Central Park with walking tracks, gazebo, and kids play park",
-      "100% Underground electric power network and street lighting system",
-      "Dedicated individual water supply pipeline and storm water drainage",
-      "40ft and 30ft wide blacktop tar roads with paved pedestrian walkways",
-      "100% Vasthu compliant plot layouts with immediate registration & bank loan support"
+
     ],
     imagePrimary: img1,
     imageSecondary: img3
@@ -252,54 +246,54 @@ export const propertyData = {
       title: "Children's Play Park & Swings",
       icon: "Smile"
     },
-    {
-      id: 13,
-      category: "security",
-      title: "24/7 CCTV Camera Surveillance",
-      icon: "Camera"
-    },
-    {
-      id: 14,
-      category: "infrastructure",
-      title: "Automated Solar LED Streetlights",
-      icon: "Sun"
-    },
-    {
-      id: 15,
-      category: "nature",
-      title: "Seating Gazebos & Pergolas",
-      icon: "Flower2"
-    },
-    {
-      id: 16,
-      category: "security",
-      title: "RFID Boom Barrier Gatehouse",
-      icon: "Radio"
-    },
-    {
-      id: 17,
-      category: "clubhouse",
-      title: "Senior Citizen Relaxation Zone",
-      icon: "Heart"
-    },
-    {
-      id: 18,
-      category: "infrastructure",
-      title: "Engineered Stormwater Drainage",
-      icon: "Layers"
-    },
-    {
-      id: 19,
-      category: "sports",
-      title: "Outdoor Badminton Court",
-      icon: "Activity"
-    },
-    {
-      id: 20,
-      category: "security",
-      title: "Secured Compound Perimeter Wall",
-      icon: "ShieldAlert"
-    }
+    // {
+    //   id: 13,
+    //   category: "security",
+    //   title: "24/7 CCTV Camera Surveillance",
+    //   icon: "Camera"
+    // },
+    // {
+    //   id: 14,
+    //   category: "infrastructure",
+    //   title: "Automated Solar LED Streetlights",
+    //   icon: "Sun"
+    // },
+    // {
+    //   id: 15,
+    //   category: "nature",
+    //   title: "Seating Gazebos & Pergolas",
+    //   icon: "Flower2"
+    // },
+    // {
+    //   id: 16,
+    //   category: "security",
+    //   title: "RFID Boom Barrier Gatehouse",
+    //   icon: "Radio"
+    // },
+    // {
+    //   id: 17,
+    //   category: "clubhouse",
+    //   title: "Senior Citizen Relaxation Zone",
+    //   icon: "Heart"
+    // },
+    // {
+    //   id: 18,
+    //   category: "infrastructure",
+    //   title: "Engineered Stormwater Drainage",
+    //   icon: "Layers"
+    // },
+    // {
+    //   id: 19,
+    //   category: "sports",
+    //   title: "Outdoor Badminton Court",
+    //   icon: "Activity"
+    // },
+    // {
+    //   id: 20,
+    //   category: "security",
+    //   title: "Secured Compound Perimeter Wall",
+    //   icon: "ShieldAlert"
+    // }
   ],
 
   // --- NEARBY CONNECTIVITY WITH KMS & TIME DETAILS (Kurumbapalayam / Sathy Road Corridor) ---
