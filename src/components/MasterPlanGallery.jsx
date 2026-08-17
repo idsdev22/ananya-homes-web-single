@@ -72,9 +72,9 @@ export const MasterPlanGallery = ({ onOpenBrochure }) => {
     <section className="section gallery-section classic-gallery-theme" id="gallery">
       <div className="container">
         {/* Section Header */}
-        <div className="section-header reveal-up">
+        <div className="section-header">
           <div className="section-tag gold">
-            <ImageIcon size={14} className="animate-sparkle" />
+            <ImageIcon size={14} />
             <span>Project Gallery</span>
           </div>
           <h2 className="section-title">
@@ -87,7 +87,7 @@ export const MasterPlanGallery = ({ onOpenBrochure }) => {
 
         {/* PURE CLASSIC SWIPE SLIDER - No Filter Clutter, Clean Image Display */}
         {currentItem && (
-          <div className="classic-swipe-showcase reveal-scale">
+          <div className="classic-swipe-showcase">
             {/* Main Featured Slide Stage */}
             <div
               className="pure-slide-stage"
@@ -118,7 +118,7 @@ export const MasterPlanGallery = ({ onOpenBrochure }) => {
 
                   <button
                     type="button"
-                    className="pure-fullscreen-btn hover-scale"
+                    className="pure-fullscreen-btn"
                     onClick={() => setLightboxIndex(currentIndex)}
                     title="Open Fullscreen Preview"
                   >
@@ -130,7 +130,7 @@ export const MasterPlanGallery = ({ onOpenBrochure }) => {
                 {/* Classic Previous & Next Navigation Arrows */}
                 <button
                   type="button"
-                  className="pure-nav-btn prev-btn hover-scale"
+                  className="pure-nav-btn prev-btn"
                   onClick={handlePrev}
                   title="Previous image"
                   aria-label="Previous"
@@ -140,7 +140,7 @@ export const MasterPlanGallery = ({ onOpenBrochure }) => {
 
                 <button
                   type="button"
-                  className="pure-nav-btn next-btn hover-scale"
+                  className="pure-nav-btn next-btn"
                   onClick={handleNext}
                   title="Next image"
                   aria-label="Next"
@@ -156,7 +156,7 @@ export const MasterPlanGallery = ({ onOpenBrochure }) => {
                   <h4 className="caption-title">{currentItem.title}</h4>
                 </div>
                 <div className="pure-swipe-hint">
-                  <span className="swipe-hint-text">← Swipe to explore →</span>
+                  <span>← Swipe to explore →</span>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ export const MasterPlanGallery = ({ onOpenBrochure }) => {
                   <button
                     key={item.id || idx}
                     type="button"
-                    className={`pure-thumb-card hover-lift ${currentIndex === idx ? 'active' : ''}`}
+                    className={`pure-thumb-card ${currentIndex === idx ? 'active' : ''}`}
                     onClick={() => setCurrentIndex(idx)}
                     title={item.title}
                   >

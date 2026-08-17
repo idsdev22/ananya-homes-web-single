@@ -31,9 +31,9 @@ export const NearbyConnectivity = ({ onOpenEnquiry }) => {
   return (
     <section className="section nearby-section" id="location">
       <div className="container">
-        <div className="section-header reveal-up">
+        <div className="section-header">
           <div className="section-tag gold">
-            <Compass size={14} className="animate-sparkle" />
+            <Compass size={14} />
             <span>{nearbyLocations.subtitle}</span>
           </div>
           <h2 className="section-title">
@@ -45,7 +45,7 @@ export const NearbyConnectivity = ({ onOpenEnquiry }) => {
         </div>
 
         {/* Category Navigation Tabs */}
-        <div className="nearby-tabs-wrapper reveal-fade">
+        <div className="nearby-tabs-wrapper">
           <div className="nearby-tabs-list">
             {nearbyLocations.categories.map((category) => {
               const TabIcon = categoryIconMap[category.id] || MapPin;
@@ -54,7 +54,7 @@ export const NearbyConnectivity = ({ onOpenEnquiry }) => {
                 <button
                   key={category.id}
                   type="button"
-                  className={`nearby-tab-btn hover-lift ${isActive ? 'active' : ''}`}
+                  className={`nearby-tab-btn ${isActive ? 'active' : ''}`}
                   onClick={() => setActiveTab(category.id)}
                 >
                   <TabIcon size={18} className="nearby-tab-icon" />
@@ -66,31 +66,31 @@ export const NearbyConnectivity = ({ onOpenEnquiry }) => {
         </div>
 
         {/* Content Area: Grid of Landmarks + Map Preview */}
-        <div className="nearby-grid-layout reveal-up">
+        <div className="nearby-grid-layout">
           {/* Left Column: Landmark Cards */}
           <div className="landmarks-column">
             <div className="landmarks-header">
               <div className="category-indicator">
-                <IconActive size={20} className="indicator-icon text-gold animate-sparkle" />
+                <IconActive size={20} className="indicator-icon text-gold" />
                 <h3>{currentCategory.name} Near {projectInfo.name}</h3>
               </div>
               <span className="landmarks-count">{currentCategory.items.length} Key Destinations</span>
             </div>
 
-            <div className="landmarks-cards-grid" key={activeTab}>
+            <div className="landmarks-cards-grid">
               {currentCategory.items.map((item, idx) => (
-                <div key={idx} className="landmark-card hover-lift animate-fade-in" style={{ animationDelay: `${idx * 70}ms` }}>
+                <div key={idx} className="landmark-card animate-fade-in">
                   <div className="landmark-info">
                     <div className="landmark-badge">{item.landmark}</div>
                     <h4 className="landmark-name">{item.name}</h4>
                   </div>
 
                   <div className="landmark-metrics">
-                    <div className="metric-badge distance-badge hover-scale">
+                    <div className="metric-badge distance-badge">
                       <MapPin size={13} />
                       <span>{item.distance}</span>
                     </div>
-                    <div className="metric-badge time-badge hover-scale">
+                    <div className="metric-badge time-badge">
                       <Clock size={13} />
                       <span>{item.time}</span>
                     </div>

@@ -30,7 +30,7 @@ export const StickyActions = ({ onOpenEnquiry }) => {
       <div className="vertical-floating-actions d-none-mobile">
         <a 
           href={`tel:${projectInfo.phone}`} 
-          className="vertical-action-btn call-now-btn hover-lift"
+          className="vertical-action-btn call-now-btn"
           title="Call Property Advisor"
         >
           <Phone size={16} className="vertical-icon" />
@@ -40,7 +40,7 @@ export const StickyActions = ({ onOpenEnquiry }) => {
         <button 
           type="button" 
           onClick={onOpenEnquiry} 
-          className="vertical-action-btn enquire-now-btn btn-shimmer hover-lift"
+          className="vertical-action-btn enquire-now-btn"
           title="Get Price & Brochure"
         >
           <MessageSquareText size={16} className="vertical-icon" />
@@ -49,7 +49,7 @@ export const StickyActions = ({ onOpenEnquiry }) => {
       </div>
 
       {/* MOBILE STICKY BOTTOM 50/50 BAR */}
-      <div className="mobile-sticky-bottom-bar d-flex-mobile animate-slide-up">
+      <div className="mobile-sticky-bottom-bar d-flex-mobile">
         <a 
           href={`tel:${projectInfo.phone}`} 
           className="mobile-bar-btn mobile-call-btn"
@@ -62,7 +62,7 @@ export const StickyActions = ({ onOpenEnquiry }) => {
         <button 
           type="button" 
           onClick={onOpenEnquiry} 
-          className="mobile-bar-btn mobile-enquire-btn btn-shimmer"
+          className="mobile-bar-btn mobile-enquire-btn"
           title="Enquire Now"
         >
           <MessageSquareText size={18} />
@@ -74,7 +74,7 @@ export const StickyActions = ({ onOpenEnquiry }) => {
       {showScrollTop && (
         <button 
           type="button" 
-          className="floating-scroll-top animate-pop-in hover-scale"
+          className="floating-scroll-top"
           onClick={scrollToTop}
           title="Scroll to top"
         >

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { HeroBanner } from './components/HeroBanner';
 import { OfferBanner } from './components/OfferBanner';
@@ -14,7 +14,6 @@ import { StickyActions } from './components/StickyActions';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { EnquiryModal } from './components/EnquiryModal';
 import { propertyData } from './data/propertyData';
-import { useScrollReveal } from './hooks/useScrollReveal';
 import { ShieldCheck, Phone, Mail, MapPin, Download } from 'lucide-react';
 import './App.css';
 
@@ -23,25 +22,6 @@ function App() {
     isOpen: false,
     initialData: {}
   });
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  // Initialize Scroll Reveal Engine
-  useScrollReveal();
-
-  // Track page scroll progress
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      if (windowHeight > 0) {
-        const progress = Math.min(100, Math.max(0, (totalScroll / windowHeight) * 100));
-        setScrollProgress(progress);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleOpenEnquiry = (initialData = {}) => {
     setModalState({
@@ -72,10 +52,6 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Dynamic Top Scroll Progress Indicator */}
-      <div className="scroll-progress-container" aria-hidden="true">
-        <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }}></div>
-      </div>
 
       <main>
         <HeroBanner

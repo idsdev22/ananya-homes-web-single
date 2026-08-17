@@ -9,16 +9,15 @@ export const ProjectOverview = ({ onOpenBrochure, onOpenEnquiry }) => {
     <section className="section overview-section" id="overview">
       <div className="container">
         <div className="overview-grid">
-          {/* Left Column: Visual Collage with smooth entrance */}
-          <div className="overview-visual-col reveal-left">
-            <div className="visual-card primary-visual hover-lift">
+          {/* Left Column: Visual Collage */}
+          <div className="overview-visual-col">
+            <div className="visual-card primary-visual">
               <img
                 src={overview.imagePrimary}
                 alt={`${projectInfo.name} Architecture`}
                 className="overview-img"
-                loading="lazy"
               />
-              <div className="visual-badge-floating animate-float-gentle">
+              <div className="visual-badge-floating">
                 <Award size={20} className="badge-icon text-gold" />
                 <div>
                   <div className="badge-title">DTCP Approved Layout</div>
@@ -27,14 +26,13 @@ export const ProjectOverview = ({ onOpenBrochure, onOpenEnquiry }) => {
               </div>
             </div>
 
-            <div className="visual-card secondary-visual d-none-mobile hover-lift">
+            <div className="visual-card secondary-visual d-none-mobile">
               <img
                 src={overview.imageSecondary}
                 alt={`${projectInfo.name} Community`}
                 className="overview-img-secondary"
-                loading="lazy"
               />
-              <div className="visual-overlay-stat pulse-badge">
+              <div className="visual-overlay-stat">
                 <div className="stat-highlight">100%</div>
                 <div className="stat-text">Vasthu Compliant Plots</div>
               </div>
@@ -42,9 +40,9 @@ export const ProjectOverview = ({ onOpenBrochure, onOpenEnquiry }) => {
           </div>
 
           {/* Right Column: Narrative & Highlights */}
-          <div className="overview-content-col reveal-right">
+          <div className="overview-content-col">
             <div className="section-tag">
-              <Sparkles size={14} className="animate-sparkle" />
+              <Sparkles size={14} />
               <span>{overview.subtitle}</span>
             </div>
 
@@ -62,10 +60,10 @@ export const ProjectOverview = ({ onOpenBrochure, onOpenEnquiry }) => {
               </p>
             ))}
 
-            {/* Feature Highlights Grid with Staggered Entrance */}
-            <div className="overview-highlights-list reveal-stagger">
+            {/* Feature Highlights Grid */}
+            <div className="overview-highlights-list">
               {overview.highlightsList.map((item, idx) => (
-                <div key={idx} className="highlight-item hover-scale">
+                <div key={idx} className="highlight-item">
                   <div className="highlight-check">
                     <CheckCircle2 size={18} />
                   </div>
@@ -82,4 +80,3 @@ export const ProjectOverview = ({ onOpenBrochure, onOpenEnquiry }) => {
     </section>
   );
 };
-

@@ -59,9 +59,9 @@ export const Amenities = () => {
   return (
     <section className="section amenities-section" id="amenities">
       <div className="container">
-        <div className="section-header reveal-up">
+        <div className="section-header">
           <div className="section-tag">
-            <Sparkles size={14} className="animate-sparkle" />
+            <Sparkles size={14} />
             <span>World-Class Lifestyle</span>
           </div>
           <h2 className="section-title">
@@ -72,12 +72,14 @@ export const Amenities = () => {
           </p>
         </div>
 
-        {/* Amenities Icons & Text Title Only Grid with Staggered Scroll Reveal */}
-        <div className="amenities-icon-grid reveal-stagger">
+
+
+        {/* Amenities Icons & Text Title Only Grid */}
+        <div className="amenities-icon-grid">
           {filteredAmenities.map((item, idx) => {
             const IconComponent = iconMap[item.icon] || Sparkles;
             return (
-              <div key={item.id || idx} className="amenity-icon-card hover-lift">
+              <div key={item.id || idx} className="amenity-icon-card">
                 <div className="amenity-icon-box">
                   <IconComponent size={24} className="amenity-svg-icon" />
                 </div>

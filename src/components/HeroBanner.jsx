@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { propertyData } from '../data/propertyData';
 import { ShieldCheck, CheckCircle2, Phone, MessageSquare, Sparkles, Send } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import heroBg from '../assets/banner.png';
 import mobileHeroBg from '../assets/mobile_banner.png';
 import './HeroBanner.css';
@@ -27,15 +26,6 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
-    try {
-      confetti({
-        particleCount: 75,
-        spread: 70,
-        origin: { y: 0.6 }
-      });
-    } catch (err) {
-      // Confetti fallback
-    }
     if (onFormSuccess) onFormSuccess(formData);
   };
 
@@ -60,7 +50,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
           <div className="hero-enquiry-box font-poppins">
             <div className="enquiry-box-header">
               <div className="enquiry-badge">
-                <Sparkles size={13} className="text-gold animate-sparkle" />
+                <Sparkles size={13} className="text-gold" />
                 <span>DIRECT BUILDER PRIVILEGE</span>
               </div>
               <h3 className="enquiry-title">Enquire Now</h3>
@@ -68,7 +58,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
             </div>
 
             {isSubmitted ? (
-              <div className="enquiry-success-msg animate-pop-in">
+              <div className="enquiry-success-msg">
                 <div className="success-icon-wrap">
                   <CheckCircle2 size={40} className="text-gold" />
                 </div>
@@ -112,7 +102,9 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                   />
                 </div>
 
-                <button type="submit" className="enquiry-submit btn-shimmer">
+
+
+                <button type="submit" className="enquiry-submit">
                   <span>GET ENQUIRY</span>
                   <Send size={15} />
                 </button>
@@ -132,7 +124,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
         <div className="hero-enquiry-box font-poppins mobile-card-hero">
           <div className="enquiry-box-header">
             <div className="enquiry-badge">
-              <Sparkles size={13} className="text-gold animate-sparkle" />
+              <Sparkles size={13} className="text-gold" />
               <span>DIRECT BUILDER PRIVILEGE</span>
             </div>
             <h3 className="enquiry-title">Enquire Now</h3>
@@ -140,7 +132,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
           </div>
 
           {isSubmitted ? (
-            <div className="enquiry-success-msg animate-pop-in">
+            <div className="enquiry-success-msg">
               <div className="success-icon-wrap">
                 <CheckCircle2 size={40} className="text-gold" />
               </div>
@@ -184,7 +176,9 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                 />
               </div>
 
-              <button type="submit" className="enquiry-submit btn-shimmer">
+
+
+              <button type="submit" className="enquiry-submit">
                 <span>GET ENQUIRY</span>
                 <Send size={15} />
               </button>

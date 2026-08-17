@@ -56,10 +56,10 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
 
   return (
     <div className="modal-backdrop" onClick={handleClose}>
-      <div className="modal-content-card animate-pop-in" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content-card animate-fade-in" onClick={(e) => e.stopPropagation()}>
         <button 
           type="button" 
-          className="modal-close-btn hover-scale"
+          className="modal-close-btn"
           onClick={handleClose}
           title="Close Modal"
         >
@@ -67,7 +67,7 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
         </button>
 
         {isSuccess ? (
-          <div className="modal-success-view animate-pop-in">
+          <div className="modal-success-view">
             <CheckCircle2 size={56} className="modal-success-icon text-gold" />
             <h3 className="modal-success-title">Enquiry Received!</h3>
             <p className="modal-success-text">
@@ -75,7 +75,7 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
             </p>
             <button 
               type="button" 
-              className="btn-primary w-100 mt-4 btn-shimmer hover-lift"
+              className="btn-primary w-100 mt-4"
               onClick={handleClose}
             >
               Done
@@ -137,9 +137,11 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
                 </div>
               </div>
 
+
+
               <button 
                 type="submit" 
-                className="submit-btn w-100 btn-shimmer hover-lift"
+                className="submit-btn w-100"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
