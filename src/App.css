@@ -3024,3 +3024,79 @@
     text-align: center;
   }
 }
+
+/* ============================================================================
+   GLOBAL MOTION & COMPONENT MICRO-ANIMATIONS
+   ============================================================================ */
+
+/* Highlights Checklist Item Hover Pop */
+.highlight-item {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlight-item:hover {
+  transform: translateX(6px);
+}
+
+.highlight-item:hover .highlight-check {
+  transform: scale(1.15) rotate(6deg);
+  background: var(--primary-burgundy);
+  color: #ffd875;
+}
+
+.highlight-check {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Amenity Card Interactive Glow and Pop */
+.amenity-icon-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.amenity-icon-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 14px 30px rgba(112, 19, 30, 0.12), 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+.amenity-icon-card:hover .amenity-svg-icon {
+  transform: scale(1.18) rotate(6deg);
+}
+
+/* Gallery Swipe Hint Animated Oscillating Text */
+.swipe-hint-text {
+  display: inline-block;
+  animation: bounceHint 2.5s ease-in-out infinite;
+  color: #dab23c;
+  font-weight: 600;
+}
+
+/* Modal Smooth Entrance */
+.modal-backdrop {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content-card {
+  animation: popIn 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+}
+
+/* Mobile Sticky Bottom Bar Slide Up */
+.animate-slide-up {
+  animation: slideUpBottom 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Smooth Image Loading */
+.overview-img, .overview-img-secondary, .pure-slide-img, .pure-thumb-img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
