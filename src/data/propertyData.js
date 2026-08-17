@@ -101,8 +101,8 @@ export const propertyData = {
 
   // --- PROJECT OVERVIEW SECTION ---
   overview: {
-    subtitle: "PREMIUM PLOTTED COMMUNITY",
-    title: "Crafted for Generations of Prosperity",
+    subtitle: "Premium Gated Community",
+    title: "Royal Varishtaa, Kurumbapalayam, Coimbatore",
     leadText: "Royal Varishtaa is an exclusive premium gated community featuring DTCP & RERA approved residential plots in the fast-growing locality of Kurumbapalayam, Coimbatore.",
     paragraphs: [
       "Strategically located near Sathy Road, it offers seamless connectivity to Saravanampatti IT parks, Kovilpalayam, Coimbatore International Airport, and major everyday conveniences.",
