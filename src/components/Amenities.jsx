@@ -72,21 +72,7 @@ export const Amenities = () => {
           </p>
         </div>
 
-        {/* Category Filter Tabs */}
-        <div className="amenity-tabs-wrapper">
-          <div className="amenity-tabs-scroll">
-            {amenityCategories.map((cat) => (
-              <button
-                key={cat.id}
-                type="button"
-                className={`amenity-tab-btn ${activeCategory === cat.id ? 'active' : ''}`}
-                onClick={() => setActiveCategory(cat.id)}
-              >
-                <span>{cat.name}</span>
-              </button>
-            ))}
-          </div>
-        </div>
+
 
         {/* Amenities Icons & Text Title Only Grid */}
         <div className="amenities-icon-grid">

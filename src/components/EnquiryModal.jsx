@@ -7,23 +7,13 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
   const { projectInfo } = propertyData;
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    phone: '',
-    plotInterest: initialData?.title || 'General Enquiry',
-    message: '',
-    consent: true
+    city: '',
+    phone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  useEffect(() => {
-    if (initialData?.title) {
-      setFormData(prev => ({
-        ...prev,
-        plotInterest: initialData.title
-      }));
-    }
-  }, [initialData]);
+
 
   if (!isOpen) return null;
 
@@ -120,12 +110,13 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
 
               <div className="form-group">
                 <input 
-                  type="email" 
+                  type="text" 
                   className="form-input" 
-                  placeholder="Email Address" 
-                  name="email" 
-                  value={formData.email}
+                  placeholder="City *" 
+                  name="city" 
+                  value={formData.city}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -146,36 +137,7 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
                 </div>
               </div>
 
-              <div className="form-group">
-                <select 
-                  className="form-input" 
-                  name="plotInterest"
-                  value={formData.plotInterest}
-                  onChange={handleChange}
-                >
-                  <option value="General Enquiry">Interested In: General Enquiry</option>
-                  <option value="1.50 Cents Compact Plot">1.50 Cents Compact Plot</option>
-                  <option value="3.00 Cents Classic Plot">3.00 Cents Classic Villa Plot</option>
-                  <option value="4.50 Cents Premium Plot">4.50 Cents Premium Villa Plot</option>
-                  <option value="6.00 Cents Signature Estate">6.00 Cents Signature Estate Plot</option>
-                  <option value="Custom Luxury Villa Construction">Turnkey Luxury Villa Construction</option>
-                </select>
-              </div>
 
-              <div className="form-group consent-group">
-                <label className="consent-label">
-                  <input 
-                    type="checkbox" 
-                    name="consent" 
-                    checked={formData.consent} 
-                    onChange={handleChange} 
-                    required 
-                  />
-                  <span className="consent-text">
-                    I authorize <strong>{projectInfo.developer}</strong> to contact me via Call/WhatsApp with project updates.
-                  </span>
-                </label>
-              </div>
 
               <button 
                 type="submit" 
@@ -193,7 +155,7 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
                       </>
                     ) : (
                       <>
-                        <span>Request Callback & Price Sheet</span>
+                        <span>Enquiry Now</span>
                         <ArrowRight size={16} />
                       </>
                     )}

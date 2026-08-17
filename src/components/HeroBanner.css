@@ -120,7 +120,6 @@
 }
 
 .enquiry-form input[type="text"],
-.enquiry-form input[type="email"],
 .enquiry-form input[type="tel"] {
   width: 100%;
   padding: 10px 13px;
@@ -295,7 +294,6 @@
   }
 
   .enquiry-form input[type="text"],
-  .enquiry-form input[type="email"],
   .enquiry-form input[type="tel"] {
     padding: 9px 12px;
     font-size: 13px;
@@ -330,7 +328,6 @@
   }
 
   .enquiry-form input[type="text"],
-  .enquiry-form input[type="email"],
   .enquiry-form input[type="tel"] {
     padding: 8px 10px;
     font-size: 12.5px;
@@ -393,7 +390,6 @@
   }
 
   .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="text"],
-  .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="email"],
   .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="tel"] {
     font-size: 15px;
     padding: 12px 14px;

@@ -8,9 +8,8 @@ import './HeroBanner.css';
 export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    phone: '',
-    consent: true
+    city: '',
+    phone: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -37,9 +36,9 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
         <picture className="hero-banner-picture">
           <source media="(max-width: 768px)" srcSet={mobileHeroBg} />
           <source media="(min-width: 769px)" srcSet={heroBg} />
-          <img 
-            src={heroBg} 
-            alt={`${projectInfo?.name || 'Royal Varishtaa'} - ${projectInfo?.tagline || 'Premium DTCP Plots'}`} 
+          <img
+            src={heroBg}
+            alt={`${projectInfo?.name || 'Royal Varishtaa'} - ${projectInfo?.tagline || 'Premium DTCP Plots'}`}
             className="hero-banner-img"
             loading="eager"
             fetchPriority="high"
@@ -81,11 +80,12 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
 
                 <div className="form-group-hero">
                   <input
-                    type="email"
-                    placeholder="Email Address"
-                    name="email"
-                    value={formData.email}
+                    type="text"
+                    placeholder="City *"
+                    name="city"
+                    value={formData.city}
                     onChange={handleChange}
+                    required
                   />
                 </div>
 
@@ -102,20 +102,10 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                   />
                 </div>
 
-                <label className="enquiry-consent">
-                  <input
-                    type="checkbox"
-                    name="consent"
-                    checked={formData.consent}
-                    onChange={handleChange}
-                  />
-                  <span>
-                    I authorize <strong>{projectInfo?.developer || 'Ananya Homes'}</strong> & representatives to contact me via Call, SMS, or WhatsApp.
-                  </span>
-                </label>
+
 
                 <button type="submit" className="enquiry-submit">
-                  <span>GET INSTANT PRICE DETAILS</span>
+                  <span>GET ENQUIRY</span>
                   <Send size={15} />
                 </button>
 
@@ -164,11 +154,12 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
 
               <div className="form-group-hero">
                 <input
-                  type="email"
-                  placeholder="Email Address"
-                  name="email"
-                  value={formData.email}
+                  type="text"
+                  placeholder="City *"
+                  name="city"
+                  value={formData.city}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -185,20 +176,10 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                 />
               </div>
 
-              <label className="enquiry-consent">
-                <input
-                  type="checkbox"
-                  name="consent"
-                  checked={formData.consent}
-                  onChange={handleChange}
-                />
-                <span>
-                  I authorize <strong>{projectInfo?.developer || 'Ananya Homes'}</strong> & representatives to contact me via Call, SMS, or WhatsApp.
-                </span>
-              </label>
+
 
               <button type="submit" className="enquiry-submit">
-                <span>GET INSTANT PRICE DETAILS</span>
+                <span>GET ENQUIRY</span>
                 <Send size={15} />
               </button>
 

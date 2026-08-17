@@ -934,17 +934,17 @@
 }
 
 .overview-lead {
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: var(--primary-navy);
   font-weight: 500;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
 
 .overview-paragraph {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 20px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
 }
 
 .overview-highlights-list {

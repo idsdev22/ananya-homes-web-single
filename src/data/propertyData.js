@@ -103,9 +103,11 @@ export const propertyData = {
   overview: {
     subtitle: "PREMIUM PLOTTED COMMUNITY",
     title: "Crafted for Generations of Prosperity",
-    leadText: "Royal Varishtaa by Ananya Homes is a meticulously planned gated residential plotted enclave in Kurumbapalayam, engineered for discerning homebuyers and strategic investors.",
+    leadText: "Royal Varishtaa is an exclusive premium gated community featuring DTCP & RERA approved residential plots in the fast-growing locality of Kurumbapalayam, Coimbatore.",
     paragraphs: [
-      "Strategically situated in Coimbatore's rapidly growing northern corridor at Kurumbapalayam (near Sathy Road & Saravanampatti IT hub), Royal Varishtaa offers premium freehold DTCP plots with high appreciation potential.",
+      "Strategically located near Sathy Road, it offers seamless connectivity to Saravanampatti IT parks, Kovilpalayam, Coimbatore International Airport, and major everyday conveniences.",
+      "The community provides a perfect blend of luxury and nature with spacious layouts, wide blacktop roads, underground drainage, solar street lights, and 24/7 CCTV security.",
+      "With legally approved plots, high appreciation potential, and bank loan assistance, Royal Varishtaa is the perfect destination for building your dream home or securing a future-ready investment."
     ],
     highlightsList: [
 
@@ -177,123 +179,51 @@ export const propertyData = {
     {
       id: 1,
       category: "security",
-      title: "Grand Entrance Archway",
+      title: "Grand Arch",
       icon: "ShieldCheck"
     },
     {
       id: 2,
-      category: "clubhouse",
-      title: "The Royal Clubhouse",
-      icon: "Building2"
+      category: "infrastructure",
+      title: "Wide tar road",
+      icon: "Milestone"
     },
     {
       id: 3,
-      category: "sports",
-      title: "Resort Swimming Pool",
-      icon: "Waves"
+      category: "infrastructure",
+      title: "EB Connection",
+      icon: "Zap"
     },
     {
       id: 4,
-      category: "nature",
-      title: "Lush Landscaped Central Park",
-      icon: "Trees"
+      category: "infrastructure",
+      title: "Water Connection",
+      icon: "Droplets"
     },
     {
       id: 5,
-      category: "sports",
-      title: "Modern Fitness & Gym Studio",
-      icon: "Dumbbell"
+      category: "nature",
+      title: "Park",
+      icon: "Trees"
     },
     {
       id: 6,
       category: "sports",
-      title: "Multi-Sport Arena & Turf",
+      title: "Turf",
       icon: "Trophy"
     },
     {
       id: 7,
-      category: "infrastructure",
-      title: "40ft & 30ft Wide Tar Roads",
-      icon: "Milestone"
+      category: "sports",
+      title: "Pickleball Court",
+      icon: "Activity"
     },
     {
       id: 8,
       category: "infrastructure",
-      title: "100% Underground Electricity",
-      icon: "Zap"
-    },
-    {
-      id: 9,
-      category: "infrastructure",
-      title: "Individual Water Supply Lines",
-      icon: "Droplets"
-    },
-    {
-      id: 10,
-      category: "infrastructure",
-      title: "EV Vehicle Charging Station",
-      icon: "BatteryCharging"
-    },
-    {
-      id: 11,
-      category: "nature",
-      title: "Jogging & Walking Boulevards",
-      icon: "Footprints"
-    },
-    {
-      id: 12,
-      category: "clubhouse",
-      title: "Children's Play Park & Swings",
-      icon: "Smile"
-    },
-    // {
-    //   id: 13,
-    //   category: "security",
-    //   title: "24/7 CCTV Camera Surveillance",
-    //   icon: "Camera"
-    // },
-    // {
-    //   id: 14,
-    //   category: "infrastructure",
-    //   title: "Automated Solar LED Streetlights",
-    //   icon: "Sun"
-    // },
-    // {
-    //   id: 15,
-    //   category: "nature",
-    //   title: "Seating Gazebos & Pergolas",
-    //   icon: "Flower2"
-    // },
-    // {
-    //   id: 16,
-    //   category: "security",
-    //   title: "RFID Boom Barrier Gatehouse",
-    //   icon: "Radio"
-    // },
-    // {
-    //   id: 17,
-    //   category: "clubhouse",
-    //   title: "Senior Citizen Relaxation Zone",
-    //   icon: "Heart"
-    // },
-    // {
-    //   id: 18,
-    //   category: "infrastructure",
-    //   title: "Engineered Stormwater Drainage",
-    //   icon: "Layers"
-    // },
-    // {
-    //   id: 19,
-    //   category: "sports",
-    //   title: "Outdoor Badminton Court",
-    //   icon: "Activity"
-    // },
-    // {
-    //   id: 20,
-    //   category: "security",
-    //   title: "Secured Compound Perimeter Wall",
-    //   icon: "ShieldAlert"
-    // }
+      title: "Street Light",
+      icon: "Sun"
+    }
   ],
 
   // --- NEARBY CONNECTIVITY WITH KMS & TIME DETAILS (Kurumbapalayam / Sathy Road Corridor) ---
@@ -303,62 +233,46 @@ export const propertyData = {
     description: "Situated in Kurumbapalayam near Sathy Road and Saravanampatti IT corridor, Royal Varishtaa places premier educational institutes, healthcare centres, tech parks, and transit hubs minutes away.",
     categories: [
       {
-        id: "transit",
-        name: "Transit & Key Hubs",
-        icon: "Navigation",
+        id: "schools",
+        name: "Schools",
+        icon: "School",
         items: [
-          { name: "Sathy Road (NH-209)", distance: "1.5 km", time: "3 Mins", landmark: "Direct Arterial Link" },
-          { name: "Kumaran Hospital", distance: "2.5 km", time: "5 Mins", landmark: "Multi-Speciality Healthcare" },
-          { name: "Kumaraguru College of Tech (KCT)", distance: "4.8 km", time: "5-10 Mins", landmark: "Premier Campus" },
-          { name: "CHIL SEZ IT Park (Saravanampatti)", distance: "6.2 km", time: "10-15 Mins", landmark: "Cognizant / Bosch IT Hub" },
-          { name: "Coimbatore International Airport (CJB)", distance: "9.5 km", time: "10-15 Mins", landmark: "Domestic & Global Flights" },
-          { name: "Avinashi Road Bypass", distance: "8.0 km", time: "12 Mins", landmark: "6-Lane Expressway" }
+          { name: "KV Matriculation Higher Secondary School", distance: "2 km", time: "5 Mins", landmark: "School" },
+          { name: "Adithya Public Matriculation School", distance: "3 km", time: "8 Mins", landmark: "School" }
         ]
       },
       {
         id: "colleges",
-        name: "Colleges & Universities",
+        name: "Colleges",
         icon: "GraduationCap",
         items: [
-          { name: "Kumaraguru College of Technology (KCT)", distance: "4.8 km", time: "8 Mins", landmark: "Saravanampatti" },
-          { name: "SNS College of Technology & Engineering", distance: "3.2 km", time: "5 Mins", landmark: "Kurumbapalayam Campus" },
-          { name: "Dr. NGP Institute of Technology", distance: "7.0 km", time: "10 Mins", landmark: "Kalapatti" },
-          { name: "PSG Institute of Technology (PSG iTech)", distance: "8.5 km", time: "12 Mins", landmark: "Neelambur Link" },
-          { name: "KPR Institute of Engineering", distance: "9.0 km", time: "12 Mins", landmark: "Arasur" }
-        ]
-      },
-      {
-        id: "schools",
-        name: "Top Schools",
-        icon: "School",
-        items: [
-          { name: "Adithya International School", distance: "2.0 km", time: "4 Mins", landmark: "CBSE Curriculum" },
-          { name: "Manchester International School", distance: "4.5 km", time: "7 Mins", landmark: "IB & IGCSE" },
-          { name: "Vidhya Niketan Public School", distance: "5.5 km", time: "8 Mins", landmark: "Saravanampatti" },
-          { name: "SSVM World School", distance: "9.0 km", time: "14 Mins", landmark: "Top Ranked" },
-          { name: "Don Bosco School", distance: "6.5 km", time: "10 Mins", landmark: "Matriculation" }
+          { name: "Info College of Engineering", distance: "3.5 km", time: "10 Mins", landmark: "College" },
+          { name: "Aditya College of Arts and Science", distance: "6 km", time: "15 Mins", landmark: "College" }
         ]
       },
       {
         id: "hospitals",
-        name: "Hospitals & Healthcare",
+        name: "Hospitals",
         icon: "Cross",
         items: [
-          { name: "Kumaran Hospital", distance: "2.5 km", time: "5 Mins", landmark: "24/7 Emergency & Trauma" },
-          { name: "Royal Care Super Speciality Hospital", distance: "7.5 km", time: "11 Mins", landmark: "Avinashi Road" },
-          { name: "KMCH (Kovai Medical Center & Hospital)", distance: "8.8 km", time: "12 Mins", landmark: "Multi-Speciality Centre" },
-          { name: "Lotus Eye Hospital", distance: "5.0 km", time: "8 Mins", landmark: "Saravanampatti" }
+          { name: "KMCH Kovilpalayam", distance: "2 km", time: "5 Mins", landmark: "Hospital" },
+          { name: "Kumaran Medical Center", distance: "2.8 km", time: "7 Mins", landmark: "Hospital" }
         ]
       },
       {
-        id: "techparks",
-        name: "IT Parks & Work Hubs",
-        icon: "Briefcase",
+        id: "shopping",
+        name: "Shopping Mall",
+        icon: "ShoppingBag",
         items: [
-          { name: "CHIL SEZ IT Park (Cognizant / Bosch / SPI)", distance: "6.2 km", time: "10-15 Mins", landmark: "Saravanampatti Hub" },
-          { name: "Indialand Tech Park", distance: "6.8 km", time: "10-15 Mins", landmark: "Global IT Hub" },
-          { name: "TIDEL Park Coimbatore", distance: "11.5 km", time: "18 Mins", landmark: "Peelamedu" },
-          { name: "KPR Tech Park", distance: "8.0 km", time: "12 Mins", landmark: "Arasur" }
+          { name: "Prozone Mall", distance: "8 km", time: "20 Mins", landmark: "Shopping Mall" }
+        ]
+      },
+      {
+        id: "transit",
+        name: "Airport",
+        icon: "Plane",
+        items: [
+          { name: "Coimbatore International Airport", distance: "12 km", time: "25 Mins", landmark: "Airport" }
         ]
       }
     ]
