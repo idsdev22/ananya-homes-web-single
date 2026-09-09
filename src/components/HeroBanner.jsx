@@ -81,10 +81,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
         <div className="hero-enquiry-overlay-wrapper">
           <div className="hero-enquiry-box font-poppins">
             <div className="enquiry-box-header">
-              <div className="enquiry-badge">
-                <Sparkles size={13} className="text-gold" />
-                <span>DIRECT BUILDER PRIVILEGE</span>
-              </div>
+
               <h3 className="enquiry-title">Enquire Now</h3>
               <p className="enquiry-subtitle">Have an enquiry? Share your details with us, and our team will get in touch with you shortly.</p>
             </div>
@@ -141,7 +138,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                 </div>
 
                 <button type="submit" className="enquiry-submit" disabled={isSubmitting}>
-                  <span>{isSubmitting ? 'SENDING...' : 'SENT ENQUIRY'}</span>
+                  <span>{isSubmitting ? 'SENDING...' : 'SEND ENQUIRY'}</span>
                   <Send size={15} />
                 </button>
 
@@ -155,10 +152,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
       <div className="hero-mobile-enquiry-section">
         <div className="hero-enquiry-box font-poppins mobile-card-hero">
           <div className="enquiry-box-header">
-            <div className="enquiry-badge">
-              <Sparkles size={13} className="text-gold" />
-              <span>DIRECT BUILDER PRIVILEGE</span>
-            </div>
+
             <h3 className="enquiry-title">Enquire Now</h3>
             <p className="enquiry-subtitle">Have an enquiry? Share your details with us, and our team will get in touch with you shortly.</p>
           </div>
@@ -215,7 +209,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
               </div>
 
               <button type="submit" className="enquiry-submit" disabled={isSubmitting}>
-                <span>{isSubmitting ? 'SENDING...' : 'SENT ENQUIRY'}</span>
+                <span>{isSubmitting ? 'SENDING...' : 'SEND ENQUIRY'}</span>
                 <Send size={15} />
               </button>
             </form>

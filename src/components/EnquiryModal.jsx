@@ -111,7 +111,6 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
         ) : (
           <div className="modal-form-view">
             <div className="modal-header">
-              <span className="modal-badge">{projectInfo.name} • VIP Registration</span>
               <h3 className="modal-title">
                 {initialData?.mode === 'brochure' ? 'Download Project Brochure' : 'Enquire Now'}
               </h3>
