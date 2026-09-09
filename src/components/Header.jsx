@@ -27,8 +27,8 @@ export const Header = ({ onOpenEnquiry, onOpenBrochure }) => {
 
         {/* Right CTA Actions - NO Nav Menu as requested */}
         <div className="header-actions">
-          <a 
-            href={`tel:${projectInfo.phone}`} 
+          <a
+            href={`tel:${projectInfo.phone}`}
             className="header-phone-btn"
             title="Call Sales Team"
           >
@@ -36,9 +36,9 @@ export const Header = ({ onOpenEnquiry, onOpenBrochure }) => {
             <span className="d-none-mobile">{projectInfo.phoneDisplay}</span>
           </a>
 
-          <button 
+          <button
             type="button"
-            onClick={onOpenBrochure} 
+            onClick={onOpenBrochure}
             className="btn-header-cta"
           >
             <Download size={15} />

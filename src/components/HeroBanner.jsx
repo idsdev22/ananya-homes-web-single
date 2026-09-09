@@ -3,30 +3,62 @@ import { propertyData } from '../data/propertyData';
 import { ShieldCheck, CheckCircle2, Phone, MessageSquare, Sparkles, Send } from 'lucide-react';
 import heroBg from '../assets/banner.png';
 import mobileHeroBg from '../assets/mobile_banner.png';
+import { submitLead } from '../services/leadService';
 import './HeroBanner.css';
 
 export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
   const [formData, setFormData] = useState({
     name: '',
-    city: '',
-    phone: ''
+    phone: '',
+    city: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const { projectInfo } = propertyData;
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    if (name === 'phone') {
+      const numericVal = value.replace(/\D/g, '').slice(0, 10);
+      setFormData(prev => ({
+        ...prev,
+        phone: numericVal
+      }));
+      return;
+    }
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    if (onFormSuccess) onFormSuccess(formData);
+    if (!formData.name || !formData.phone) {
+      alert('Please fill in your name and phone number.');
+      return;
+    }
+    if (formData.phone.length !== 10) {
+      alert('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      await submitLead({
+        name: formData.name,
+        phone: formData.phone,
+        city: formData.city,
+        source: 'Hero Banner Form'
+      });
+    } catch (err) {
+      console.error('Lead submission error:', err);
+    } finally {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      if (onFormSuccess) onFormSuccess(formData);
+    }
   };
 
   return (
@@ -54,7 +86,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                 <span>DIRECT BUILDER PRIVILEGE</span>
               </div>
               <h3 className="enquiry-title">Enquire Now</h3>
-              <p className="enquiry-subtitle">Get instant layout plan & best price quote</p>
+              <p className="enquiry-subtitle">Have an enquiry? Share your details with us, and our team will get in touch with you shortly.</p>
             </div>
 
             {isSubmitted ? (
@@ -79,6 +111,25 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                 </div>
 
                 <div className="form-group-hero">
+                  <div className="hero-phone-input-wrap">
+                    <span className="hero-phone-prefix">+91</span>
+                    <input
+                      type="tel"
+                      className="hero-phone-field"
+                      placeholder="Phone Number *"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      inputMode="numeric"
+                      maxLength={10}
+                      pattern="[0-9]{10}"
+                      title="Please enter a valid 10-digit mobile number"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group-hero">
                   <input
                     type="text"
                     placeholder="City *"
@@ -89,30 +140,11 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                   />
                 </div>
 
-                <div className="form-group-hero">
-                  <input
-                    type="tel"
-                    placeholder="Phone Number *"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    pattern="[0-9]{10}"
-                    title="Please enter a valid 10-digit mobile number"
-                    required
-                  />
-                </div>
-
-
-
-                <button type="submit" className="enquiry-submit">
-                  <span>GET ENQUIRY</span>
+                <button type="submit" className="enquiry-submit" disabled={isSubmitting}>
+                  <span>{isSubmitting ? 'SENDING...' : 'SENT ENQUIRY'}</span>
                   <Send size={15} />
                 </button>
 
-                <div className="enquiry-privacy-note">
-                  <ShieldCheck size={13} />
-                  <span>100% Privacy Guaranteed • No Spam</span>
-                </div>
               </form>
             )}
           </div>
@@ -128,7 +160,7 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
               <span>DIRECT BUILDER PRIVILEGE</span>
             </div>
             <h3 className="enquiry-title">Enquire Now</h3>
-            <p className="enquiry-subtitle">Get instant layout plan & best price quote</p>
+            <p className="enquiry-subtitle">Have an enquiry? Share your details with us, and our team will get in touch with you shortly.</p>
           </div>
 
           {isSubmitted ? (
@@ -153,6 +185,25 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
               </div>
 
               <div className="form-group-hero">
+                <div className="hero-phone-input-wrap">
+                  <span className="hero-phone-prefix">+91</span>
+                  <input
+                    type="tel"
+                    className="hero-phone-field"
+                    placeholder="Phone Number *"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    inputMode="numeric"
+                    maxLength={10}
+                    pattern="[0-9]{10}"
+                    title="Please enter a valid 10-digit mobile number"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="form-group-hero">
                 <input
                   type="text"
                   placeholder="City *"
@@ -163,30 +214,10 @@ export const HeroBanner = ({ onFormSuccess, onOpenEnquiry }) => {
                 />
               </div>
 
-              <div className="form-group-hero">
-                <input
-                  type="tel"
-                  placeholder="Phone Number *"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  pattern="[0-9]{10}"
-                  title="Please enter a valid 10-digit mobile number"
-                  required
-                />
-              </div>
-
-
-
-              <button type="submit" className="enquiry-submit">
-                <span>GET ENQUIRY</span>
+              <button type="submit" className="enquiry-submit" disabled={isSubmitting}>
+                <span>{isSubmitting ? 'SENDING...' : 'SENT ENQUIRY'}</span>
                 <Send size={15} />
               </button>
-
-              <div className="enquiry-privacy-note">
-                <ShieldCheck size={13} />
-                <span>100% Privacy Guaranteed • No Spam</span>
-              </div>
             </form>
           )}
         </div>

@@ -146,6 +146,41 @@
   box-shadow: 0 0 0 3px rgba(27, 24, 81, 0.12);
 }
 
+.hero-phone-input-wrap {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.hero-phone-prefix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  background: #f1f5f9;
+  border: 1.5px solid #e2e8f0;
+  border-right: none;
+  border-radius: 7px 0 0 7px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  user-select: none;
+  box-sizing: border-box;
+  transition: all 0.22s ease-in-out;
+}
+
+.hero-phone-input-wrap .hero-phone-field {
+  border-radius: 0 7px 7px 0 !important;
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-phone-input-wrap:focus-within .hero-phone-prefix {
+  border-color: #1b1851;
+  background: #e2e8f0;
+}
+
 .enquiry-consent {
   display: flex;
   gap: 7px;
@@ -394,6 +429,16 @@
     font-size: 15px;
     padding: 12px 14px;
     border-radius: 8px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .hero-phone-prefix {
+    font-size: 15px;
+    padding: 0 14px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .hero-phone-input-wrap .hero-phone-field {
+    border-radius: 0 8px 8px 0 !important;
   }
 
   .hero-enquiry-box.mobile-card-hero .enquiry-submit {
