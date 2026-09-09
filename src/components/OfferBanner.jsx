@@ -87,8 +87,8 @@ export const OfferBanner = ({ onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="btn-gold w-100 mt-3"
                   onClick={onOpenEnquiry}
                 >

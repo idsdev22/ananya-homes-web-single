@@ -77,8 +77,7 @@ function App() {
         <div className="container simple-footer-container">
           <div className="footer-copyright">© Ananya Homes Pvt Ltd. All rights reserved.</div>
           <div className="footer-links">
-            <a href="#terms">Terms & Conditions</a>
-            <a href="#privacy">Privacy Policy</a>
+
           </div>
         </div>
       </footer>
