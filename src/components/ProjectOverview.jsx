@@ -61,16 +61,18 @@ export const ProjectOverview = ({ onOpenBrochure, onOpenEnquiry }) => {
             ))}
 
             {/* Feature Highlights Grid */}
-            <div className="overview-highlights-list">
-              {overview.highlightsList.map((item, idx) => (
-                <div key={idx} className="highlight-item">
-                  <div className="highlight-check">
-                    <CheckCircle2 size={18} />
+            {overview.highlightsList && overview.highlightsList.length > 0 && (
+              <div className="overview-highlights-list">
+                {overview.highlightsList.map((item, idx) => (
+                  <div key={idx} className="highlight-item">
+                    <div className="highlight-check">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="highlight-text">{item}</span>
                   </div>
-                  <span className="highlight-text">{item}</span>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
 
             {/* Action Buttons */}
 

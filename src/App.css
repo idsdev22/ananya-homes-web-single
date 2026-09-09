@@ -845,7 +845,7 @@
    ============================================================================ */
 .overview-section {
   background: #ffffff;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
 }
 
 .overview-grid {
@@ -947,6 +947,10 @@
   margin-bottom: 14px;
 }
 
+.overview-paragraph:last-of-type {
+  margin-bottom: 0;
+}
+
 .overview-highlights-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -978,6 +982,10 @@
 }
 
 @media (max-width: 900px) {
+  .overview-section {
+    padding-bottom: 10px;
+  }
+
   .overview-grid {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -1240,7 +1248,13 @@
 .amenities-section {
   background: #ffffff;
   position: relative;
-  padding-top: 40px;
+  padding-top: 15px;
+}
+
+@media (max-width: 900px) {
+  .amenities-section {
+    padding-top: 10px;
+  }
 }
 
 .amenity-tabs-wrapper {
